@@ -1,0 +1,150 @@
+
+:root {
+    --container-height: 600px;
+    --contaier-width: 400px;
+    --header-height: 150px;
+  }
+  
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  
+  }
+  html {
+    font-size: 20px;
+  }
+  
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #bc684c, #787a39);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .container {
+    background-color: rgb(187, 182, 195);
+    width: var(--contaier-width);
+    height: var(--container-height);
+    position: relative;
+    overflow: hidden;
+  }
+  header {
+    width: 100%;
+    height: var(--header-height);
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  .header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(6, 6, 6);
+    background: color #8383ac;;
+  }
+  .new-todo {
+    width: 100%;
+    height: 50px;
+    color: rgb(206, 34, 34);
+    padding: 0.25rem 0;
+  }
+  .new-todo form {
+    display: flex;
+    align-items: center;
+  }
+  .new-todo form input {
+    flex: 5;
+    height: 40px;
+    background-color: rgb(117, 173, 179);
+    border: none;
+    border-right: 0px;
+    outline: transparent;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+    color: rgb(14, 13, 13);
+  }
+  .new-todo form button {
+    width: 60px;
+    height: 40px;
+    font-size: 2rem;
+    background-color: transparent;
+    color: rgb(61, 27, 173);
+    border: none;
+    border-left: 0px;
+    cursor: pointer;
+  }
+  .new-todo form button:hover {
+    text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.8);
+  }
+  
+  #todos-list {
+    height: calc(var(--container-height) - var(--header-height));
+    background: rgb(233, 228, 231);  
+    
+    padding: 0.5rem;
+    border: 1px solid rgb(120, 107, 216);
+    overflow: scroll;
+    border-radius: 0 0 5px 5px;
+  }
+  
+  #todos-list .todo {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0.5rem;
+    border-radius: 5px;
+  }
+  #todos-list .todo:hover {
+    background-color: rgba(222, 14, 14, 0.1);
+  }
+  #todos-list .todo * {
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  #todos-list .todo i {
+    font-size: 0.9rem;
+  }
+  #todos-list .todo p {
+    flex: 1;
+    word-break: break-all;
+  }
+  .checked {
+    text-decoration: line-through;
+    color: rgb(2, 52, 15);
+  }
+  #todos-list .todo .bi-pencil-square {
+    color: rgb(228, 230, 239);
+  }
+  #todos-list .todo .bi-trash {
+    color: rgb(236, 82, 82);
+    margin: 0;
+  }
+  
+  .notification {
+    position: absolute;
+  
+    width: calc(3 * var(--contaier-width) / 4);
+    height: 60px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+    opacity: 0.9;
+  
+    border-radius: 8px;
+    background-color: rgb(233, 81, 81);
+    top: 10px;
+    right: calc(-3 * var(--contaier-width) / 4);
+  
+    color: rgb(243, 236, 236);
+  
+    transition: 300ms right ease-in-out;
+  }
+  
+  .notif-enter {
+    right: 10px;
+  }
