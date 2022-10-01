@@ -1,8 +1,8 @@
 # LGM-task01-sept22
 
 # Hosted Link:
-              https://bheem2510.github.io/LGM-task01-sept22/
-==========================              
+https://bheem2510.github.io/LGM-task01-sept22/
+         
 LICENSE:
 ==========================
 Copyright (c) 2022 Bheem Mastkar
